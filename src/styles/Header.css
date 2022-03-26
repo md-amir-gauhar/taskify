@@ -1,0 +1,11 @@
+.header {
+  padding: 1rem 3rem;
+}
+
+.header a {
+  font-family: var(--banger-font);
+  font-size: 3rem;
+  color: var(--gray-1);
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,13 +1,53 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-color: #5f5ff6;
+  --gray-1: #f2f2f2;
+  --gray-2: #9ca3af;
+  --white: #fff;
+  --cookie-font: 'Cookie', cursive;
+  --banger-font: 'Bangers', cursive;
+  --todo-font: 'Satisfy', cursive;
+  --markscript-font: 'Marck Script', cursive;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+a {
+  all: unset;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.flex-col {
+  flex-direction: column;
 }
