@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Todos from '../compoenets/Todos'
+import Todos from '../components/Todos'
 import '../styles/Home.css'
 
 const Home = () => {
