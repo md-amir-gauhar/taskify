@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todos from '../compoenets/Todos'
 import '../styles/Home.css'
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
         Welcome Back, <span className='name'>{name}</span>!
       </h1>
       <h3 className='todosleft'>You have {3} tasks for today. All the best!</h3>
+      <Todos />
     </div>
   )
 }
