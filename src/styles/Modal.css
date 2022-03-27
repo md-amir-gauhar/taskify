@@ -1,0 +1,56 @@
+.modal-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.modal {
+  background-color: var(--white);
+  padding: 2rem 1rem 2rem 1rem;
+  width: 320px;
+  border-radius: 20px;
+}
+
+form {
+  gap: 1rem;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--gray-1);
+  border: none;
+  outline: none;
+}
+
+.form-buttons {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.form-buttons > button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--cookie-font);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.form-buttons > button:first-child {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 255, 0.183);
+}
+
+.form-buttons > button:last-child {
+  background-color: var(--primary-color);
+  color: var(--white);
+}

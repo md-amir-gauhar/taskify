@@ -1,0 +1,26 @@
+.todo {
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid var(--gray-2);
+  padding: 1rem ;
+}
+
+.todo > a > h3 {
+  font-size: 1.5rem;
+  font-family: var(--todo-font);
+  letter-spacing: 0.05em;
+}
+
+.todo > a > h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.action-container {
+  gap: 1rem;
+}
+
+.action-container > svg {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
