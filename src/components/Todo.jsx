@@ -6,11 +6,11 @@ import { AiFillDelete } from 'react-icons/ai'
 import '../styles/Todo.css'
 
 
-const Todo = () => {
+const Todo = ({ id, title, description, time }) => {
 
   return (
-    <div className='todo flex align-center justify-between'>
-      <Link to={"#"}><h3>My Todo 1</h3></Link>
+    <div className='todo flex align-center justify-between' key={id}>
+      <Link to={`/todo/${id}`}><h3>{title}</h3></Link>
       <div className="action-container flex align-center">
         <FaRegEdit />
         <AiFillDelete />
