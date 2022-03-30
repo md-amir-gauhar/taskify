@@ -35,6 +35,12 @@ const reducer = (state, action) => {
         ...state,
         todos: payload
       }
+    case "DELETE_TODO":
+      console.log("REmove", payload);
+      return {
+        ...state,
+        todos: payload
+      }
     default:
       return state
   }

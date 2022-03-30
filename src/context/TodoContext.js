@@ -15,9 +15,18 @@ const TodoProvider = ({ children }) => {
     return updatedTodo;
   }
 
+  const deleteTodo = (todo) => {
+    const updatedTodo = state.todos.filter(t => t.id !== todo.id)
+    dispatch({
+      type: "DELETE_TODO",
+      payload: updatedTodo,
+    })
+  }
+
   const value = {
     todos: state.todos,
     addTodo,
+    deleteTodo
   }
   return (
 
