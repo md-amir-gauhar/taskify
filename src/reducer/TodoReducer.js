@@ -41,6 +41,11 @@ const reducer = (state, action) => {
         ...state,
         todos: payload
       }
+    case "EDIT_TODO":
+      return {
+        ...state,
+        todos: payload
+      }
     default:
       return state
   }

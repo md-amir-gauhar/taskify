@@ -23,10 +23,21 @@ const TodoProvider = ({ children }) => {
     })
   }
 
+  const editTodo = (todo) => {
+    const updatedTodo = state.todos.map(t => t.id === todo.id ? { ...t, title: todo.title, description: todo.description, createdAt: todo.createdAt } : t)
+    console.log(updatedTodo);
+
+    dispatch({
+      type: "EDIT_TODO",
+      payload: updatedTodo
+    })
+  }
+
   const value = {
     todos: state.todos,
     addTodo,
-    deleteTodo
+    deleteTodo,
+    editTodo
   }
   return (
 
