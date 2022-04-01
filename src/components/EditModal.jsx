@@ -50,25 +50,30 @@ const EditModal = ({ title, description, time, id, tags, createdAt }) => {
             placeholder='Add Title'
             value={editTitle}
             onChange={(e) => setEditTitle(e.target.value)}
+            required
           />
           <textarea
             cols="30"
             rows="15"
             placeholder='Add Description'
             value={editDescription}
-            onChange={(e) => setEditDescription(e.target.value)}>
+            onChange={(e) => setEditDescription(e.target.value)}
+            required
+          >
           </textarea>
           <input
             type="text"
             placeholder='Add Tags'
             value={editTags}
             onChange={(e) => setEditTags(e.target.value)}
+            required
           />
           <input
             type="number"
             placeholder='Enter time (in minutes)'
             value={editTime}
             onChange={(e) => setEditTime(e.target.value)}
+            required
           />
 
           <div className="form-buttons flex align-center justify-around">

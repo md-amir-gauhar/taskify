@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 
 * {
   margin: 0;
@@ -24,6 +25,7 @@
   --banger-font: 'Bangers', cursive;
   --todo-font: 'Satisfy', cursive;
   --markscript-font: 'Marck Script', cursive;
+  --garamond-font: 'Cormorant Garamond', serif;
 }
 
 body {

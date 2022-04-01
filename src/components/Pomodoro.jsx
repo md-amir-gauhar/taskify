@@ -30,7 +30,7 @@ const Pomodoro = ({ clock }) => {
             setMinutes(minutes - 1);
           }
         }
-      }, 100);
+      }, 1000);
     }
     return () => clearInterval(timer);
   });

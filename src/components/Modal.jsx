@@ -41,25 +41,30 @@ const Modal = () => {
             placeholder='Add Title'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
           />
           <textarea
             cols="30"
             rows="15"
             placeholder='Add Description'
             value={description}
-            onChange={(e) => setDescription(e.target.value)}>
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          >
           </textarea>
           <input
             type="text"
             placeholder='Add Tags(separated by a comma)'
             value={tags}
             onChange={(e) => setTags(e.target.value)}
+            required
           />
           <input
             type="number"
             placeholder='Enter time (in minutes)'
             value={time}
             onChange={(e) => setTime(e.target.value)}
+            required
           />
 
           <div className="form-buttons flex align-center justify-around">
