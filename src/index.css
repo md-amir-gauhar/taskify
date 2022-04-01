@@ -11,9 +11,12 @@
 
 :root {
   --primary-color: #5f5ff6;
+  --pause-button: rgba(162, 144, 40, 0.66);
   --gray-1: #f2f2f2;
   --gray-2: #9ca3af;
   --white: #fff;
+  --red: #ff0000;
+  --black: #000;
   --cookie-font: 'Cookie', cursive;
   --banger-font: 'Bangers', cursive;
   --todo-font: 'Satisfy', cursive;
