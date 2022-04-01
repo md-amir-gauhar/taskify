@@ -1,12 +1,12 @@
 .home {
-  height: calc(100vh - 5rem);
-  padding: 1rem 6rem;
+  height: calc(100vh - 6rem);
+  padding: .5rem 6rem;
 }
 
 .welcome {
   font-family: var(--banger-font);
   color: var(--white);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   font-size: 2rem;
   margin-left: 50px;
 }
@@ -14,6 +14,7 @@
 .todosleft {
   font-family: var(--cookie-font);
   font-size: 1.8rem;
+  letter-spacing: 0.1em;
   color: var(--white);
   margin-top: 1rem;
   margin-left: 50px;

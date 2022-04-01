@@ -1,10 +1,10 @@
 .todos-container {
   background-color: var(--white);
   width: 80vw;
-  height: 69vh;
-  margin: 2rem auto;
+  height: 70vh;
+  margin: 1rem auto;
   border-radius: 1.3rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 ::-webkit-scrollbar {
@@ -42,7 +42,7 @@
 }
 
 .todo-container {
-  height: 80%;
+  height: 85%;
   overflow-y: scroll;
   margin-top: 1rem;
 }

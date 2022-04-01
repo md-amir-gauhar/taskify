@@ -4,9 +4,12 @@ import { useTodo } from '../context/TodoContext'
 import { useModal } from '../context/modal-context'
 import '../styles/Modal.css'
 
-const EditModal = ({ title, description, time, id }) => {
+const EditModal = ({ title, description, time, id, tags, createdAt }) => {
+
+  // console.log({ title, description, time, id, tags });
   const [editTitle, setEditTitle] = useState("")
   const [editDescription, setEditDescription] = useState("")
+  const [editTags, setEditTags] = useState("")
   const [editTime, setEditTime] = useState("")
   const { setIsEditModalOpen } = useModal()
   const { editTodo } = useTodo()
@@ -14,6 +17,7 @@ const EditModal = ({ title, description, time, id }) => {
   useEffect(() => {
     setEditDescription(description)
     setEditTime(time)
+    setEditTags(tags)
     setEditTitle(title)
   }, [])
 
@@ -23,14 +27,18 @@ const EditModal = ({ title, description, time, id }) => {
       id: id,
       title: editTitle,
       description: editDescription,
-      createdAt: Date.now(),
-      time: +editTime,
+      tags: editTags,
+      time: editTime,
+      createdAt
     }
+
+    console.log(todo);
 
     editTodo(todo)
     setEditTitle("")
     setEditDescription("")
     setEditTime("")
+    setEditTags("")
     setIsEditModalOpen(false)
   }
   return (
@@ -49,8 +57,13 @@ const EditModal = ({ title, description, time, id }) => {
             placeholder='Add Description'
             value={editDescription}
             onChange={(e) => setEditDescription(e.target.value)}>
-
           </textarea>
+          <input
+            type="text"
+            placeholder='Add Tags'
+            value={editTags}
+            onChange={(e) => setEditTags(e.target.value)}
+          />
           <input
             type="number"
             placeholder='Enter time (in minutes)'

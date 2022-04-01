@@ -24,7 +24,7 @@ const TodoProvider = ({ children }) => {
   }
 
   const editTodo = (todo) => {
-    const updatedTodo = state.todos.map(t => t.id === todo.id ? { ...t, title: todo.title, description: todo.description, createdAt: todo.createdAt } : t)
+    const updatedTodo = state.todos.map(t => t.id === todo.id ? { ...t, title: todo.title, description: todo.description, createdAt: todo.createdAt, time: todo.time, tags: todo.tags } : t)
     console.log(updatedTodo);
 
     dispatch({

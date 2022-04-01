@@ -25,6 +25,13 @@
   padding: 0 2rem;
 }
 
+.details .tags {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: var(--banger-font);
+  letter-spacing: .1em;
+}
+
 .title {
   font-family: var(--banger-font);
   font-size: 3rem;
@@ -37,6 +44,7 @@
   font-family: var(--markscript-font);
   font-size: 1.7rem;
   margin-bottom: 1rem;
+  word-break: break-all;
 }
 
 .createdAt {

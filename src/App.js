@@ -4,17 +4,24 @@ import Home from './pages/Home';
 import Modal from './components/Modal';
 import { useModal } from './context/modal-context';
 import TodoDetail from './components/TodoDetail';
+import { useState } from 'react';
 
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value)
+  }
+
   const { isOpen } = useModal()
   return (
     <Router>
       {isOpen && <Modal />}
-      <Header />
+      <Header searchQuery={searchQuery} handleChange={handleChange} />
       <div className="app">
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home searchQuery={searchQuery} />} />
           <Route path='/todo/:Id' element={<TodoDetail />} />
         </Routes>
       </div>

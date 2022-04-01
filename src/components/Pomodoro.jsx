@@ -9,14 +9,10 @@ import '../styles/Pomodoro.css'
 
 const blue = '#5f5ff6'
 const Pomodoro = ({ clock }) => {
-  console.log(clock)
   const [initialTime, setInitialTime] = useState({
     minute: +clock,
     second: 59
   });
-
-  console.log(initialTime);
-  console.log(clock)
   const [minutes, setMinutes] = useState(initialTime.minute - 1);
   const [seconds, setSeconds] = useState(59);
   const [pause, setPause] = useState(true);
@@ -34,7 +30,7 @@ const Pomodoro = ({ clock }) => {
             setMinutes(minutes - 1);
           }
         }
-      }, 1000);
+      }, 100);
     }
     return () => clearInterval(timer);
   });

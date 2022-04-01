@@ -8,6 +8,7 @@ import '../styles/Modal.css'
 const Modal = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
+  const [tags, setTags] = useState("")
   const [time, setTime] = useState("")
   const { setIsOpen } = useModal()
   const { addTodo } = useTodo()
@@ -20,6 +21,7 @@ const Modal = () => {
       id,
       title,
       description,
+      tags,
       createdAt: Date.now(),
       time: +time,
     }
@@ -46,8 +48,13 @@ const Modal = () => {
             placeholder='Add Description'
             value={description}
             onChange={(e) => setDescription(e.target.value)}>
-
           </textarea>
+          <input
+            type="text"
+            placeholder='Add Tags(separated by a comma)'
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+          />
           <input
             type="number"
             placeholder='Enter time (in minutes)'

@@ -11,7 +11,7 @@ const TodoDetail = () => {
   const [currentTodo, setCurrentTodo] = useState({ ...todos.find(t => t.id === Id) })
 
   let date = JSON.stringify(new Date(currentTodo.createdAt)).substring(1, 11);
-
+  const tag = currentTodo.tags.split(",")
   return (
     <div className='todoDetail flex align-center justify-center' >
       <div className="todoDetail-container flex align-center justify-between">
@@ -21,6 +21,12 @@ const TodoDetail = () => {
         <div className="details flex flex-col">
           <h1 className='title'>{currentTodo.title}</h1>
           <p className='description'>{currentTodo.description}</p>
+          <div className="tags flex align-center">
+            <span>Tags: </span>
+            {
+              tag.map((tag, idx) => <span className='tag' key={idx}>{tag}</span>)
+            }
+          </div>
           <p className='createdAt'>Created at: {date}</p>
         </div>
       </div>
