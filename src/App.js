@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Modal from './components/Modal';
 import { useModal } from './context/modal-context';
+import TodoDetail from './components/TodoDetail';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/todo/:Id' element={<TodoDetail />} />
         </Routes>
       </div>
     </Router>
