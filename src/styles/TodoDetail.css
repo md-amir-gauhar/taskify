@@ -1,0 +1,74 @@
+.todoDetail {
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+
+.todoDetail-container {
+  height: 90%;
+  width: 75%;
+  background-color: var(--white);
+  border-radius: 50px;
+  padding: 5rem 3rem 3rem 3rem;
+}
+
+.pomodoro {
+  width: 50%;
+  align-content: flex-start;
+  gap: 4rem;
+}
+
+.pomodoro-buttons {
+  gap: 4rem;
+}
+
+.pomodoro-buttons > button {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pomodoro-buttons > button:first-child {
+  background-color: var(--primary-color);
+  color: var(--gray-1);
+}
+
+.pomodoro-buttons > button:last-child {
+  background-color: rgba(206, 181, 36, 0.245);
+  color: var(--gray-2);
+}
+
+.pomodoro-buttons > svg {
+  font-size: 3rem;
+}
+
+.details {
+  width: 50%;
+  align-self: flex-start;
+  border-left: 1px solid var(--gray-1);
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.title {
+  font-family: var(--banger-font);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.description,
+.createdAt {
+  font-family: var(--markscript-font);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.createdAt {
+  color: var(--gray-2);
+}

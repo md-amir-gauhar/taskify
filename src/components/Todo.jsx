@@ -8,10 +8,6 @@ import EditModal from './EditModal'
 
 import '../styles/Todo.css'
 
-
-
-
-
 const Todo = ({ id, title, description, time }) => {
   const { deleteTodo } = useTodo()
   const { isEditModalOpen, setIsEditModalOpen } = useModal()
