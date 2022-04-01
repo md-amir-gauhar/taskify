@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import { v4 as uuid } from 'uuid'
 import { useModal } from '../context/modal-context'
+import { useTodo } from '../context/TodoContext'
+
 import '../styles/Modal.css'
 
 const Modal = () => {
@@ -7,8 +10,25 @@ const Modal = () => {
   const [description, setDescription] = useState("")
   const [time, setTime] = useState("")
   const { setIsOpen } = useModal()
+  const { addTodo } = useTodo()
+
   const submitHandler = (e) => {
     e.preventDefault()
+    e.preventDefault()
+    const id = uuid()
+    const todo = {
+      id,
+      title,
+      description,
+      createdAt: Date.now(),
+      time: +time,
+    }
+
+    addTodo(todo)
+    setTitle("")
+    setDescription("")
+    setTime("")
+    setIsOpen(false)
   }
   return (
     <div className='modal-container flex align-center justify-center'>
