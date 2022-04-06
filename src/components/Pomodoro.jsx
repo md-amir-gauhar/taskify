@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { AiFillPlayCircle, AiFillPauseCircle } from 'react-icons/ai'
@@ -7,9 +7,8 @@ import 'react-circular-progressbar/dist/styles.css';
 
 import '../styles/Pomodoro.css'
 
-const blue = '#5f5ff6'
 const Pomodoro = ({ clock }) => {
-  const [initialTime, setInitialTime] = useState({
+  const [initialTime] = useState({
     minute: +clock,
     second: 59
   });

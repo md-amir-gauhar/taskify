@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useTodo } from '../context/TodoContext'
 import Pomodoro from './Pomodoro';
@@ -8,7 +8,7 @@ import '../styles/TodoDetail.css';
 const TodoDetail = () => {
   const { todos } = useTodo()
   const { Id } = useParams()
-  const [currentTodo, setCurrentTodo] = useState({ ...todos.find(t => t.id === Id) })
+  const [currentTodo] = useState({ ...todos.find(t => t.id === Id) })
 
   let date = JSON.stringify(new Date(currentTodo.createdAt)).substring(1, 11);
   const tag = currentTodo.tags.split(",")
