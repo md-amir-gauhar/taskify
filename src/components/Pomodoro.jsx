@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { AiFillPlayCircle, AiFillPauseCircle } from 'react-icons/ai'
@@ -16,10 +16,10 @@ const Pomodoro = ({ clock }) => {
   const [seconds, setSeconds] = useState(59);
   const [pause, setPause] = useState(true);
 
-  let timer;
+  let timer = useRef();
   useEffect(() => {
     if (!pause) {
-      timer = setInterval(() => {
+      timer.current = setInterval(() => {
         if (minutes === 0 && seconds === 0) {
           reset()
         } else {
@@ -31,7 +31,7 @@ const Pomodoro = ({ clock }) => {
         }
       }, 1000);
     }
-    return () => clearInterval(timer);
+    return () => clearInterval(timer.current);
   });
 
   const reset = () => {

@@ -19,7 +19,7 @@ const EditModal = ({ title, description, time, id, tags, createdAt }) => {
     setEditTime(time)
     setEditTags(tags)
     setEditTitle(title)
-  }, [])
+  }, [description, tags, time, title])
 
   const submitHandler = (e) => {
     e.preventDefault()
