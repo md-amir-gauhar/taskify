@@ -4,7 +4,7 @@ import { useTodo } from '../context/TodoContext'
 import '../styles/Home.css'
 
 const Home = ({ searchQuery }) => {
-  const [name, setName] = useState("Amir")
+  const [name] = useState("Amir")
   const { todos } = useTodo()
 
   return (
